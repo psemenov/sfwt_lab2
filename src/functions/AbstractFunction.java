@@ -16,5 +16,5 @@ public abstract class AbstractFunction {
 
     public abstract Double getPeriod();
 
-    protected abstract double calcValue(double x);
+    public abstract double calcValue(double x);
 }
