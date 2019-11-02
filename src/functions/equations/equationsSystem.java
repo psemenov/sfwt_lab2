@@ -15,7 +15,7 @@ public class equationsSystem extends AbstractFunction {
     private final Sec sec = new Sec();
 
     @Override
-    protected double calcValue(double x) {
+    public double calcValue(double x) {
         return x > 0 ? function2(x) : function1(x);
     }
 

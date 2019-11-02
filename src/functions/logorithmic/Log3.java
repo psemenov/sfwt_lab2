@@ -7,7 +7,7 @@ public class Log3 extends AbstractFunction {
     private final Ln ln = new Ln();
 
     @Override
-    protected double calcValue(double x) {
+    public double calcValue(double x) {
         return ln.calc(x) / ln.calc(3);
     }
 
