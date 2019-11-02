@@ -4,11 +4,7 @@ import functions.AbstractFunction;
 import functions.logorithmic.Ln;
 
 public class Log3 extends AbstractFunction {
-    private final Ln ln;
-
-    public Log3(Ln ln) {
-        this.ln = ln;
-    }
+    private final Ln ln = new Ln();
 
     @Override
     protected double calcValue(double x) {
