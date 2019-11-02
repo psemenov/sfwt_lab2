@@ -1,4 +1,5 @@
 package functions.equations;
+import functions.trigonometric.*;
 
 import functions.AbstractFunction;
 import functions.logorithmic.Ln;
@@ -30,7 +31,7 @@ public class equationsSystem extends AbstractFunction {
     //TODO redo domain
     @Override
     public boolean isInDomain(double x) {
-        return (x <= 0 && cot.isInDomain(x) && tan.isInDomain(x)) || (x > 0 && x != 1);
+        return (tan.isInDomain(x)) || (x > 0 && x != 1);
     }
 
     @Override
