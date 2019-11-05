@@ -2,7 +2,7 @@ package functions.trigonometric;
 
 import org.junit.Test;
 import org.junit.Assert;
-import stub.trigonometric.SinStub;
+import stub.trigonometric.*;
 
 import java.util.Map;
 
@@ -11,8 +11,8 @@ import static org.junit.jupiter.api.Assertions.assertAll;
 
 public class CosTest extends Assert {
     Cos cos = new Cos();
-    SinStub sinStub = new SinStub();
-    Map<Double, Double> stubTable = sinStub.getTable();
+    CosStub cosStub = new CosStub();
+    Map<Double, Double> stubTable = cosStub.getTable();
 
     final double DELTA = 1E-6;
 

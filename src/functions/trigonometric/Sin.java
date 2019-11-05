@@ -23,7 +23,6 @@ public class Sin extends AbstractFunction {
                     .divide(new BigDecimal(factorial(2 * n + 1)), 10, RoundingMode.HALF_UP);
             currSum = currSum.add(term);
             n++;
-            System.out.println(n);
         } while (prevSum.subtract(currSum).abs().doubleValue() > DEFAULT_DELTA);
 
         return currSum.doubleValue();
