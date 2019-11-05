@@ -8,10 +8,10 @@ import java.util.Map;
 import static org.junit.Assert.assertEquals;
 
 public class LnTest {
-    final double DELTA = 1E-6;
-    Ln ln = new Ln();
-    LnStub lnStub = new LnStub();
-    Map<Double, Double> stubTable = lnStub.getTable();
+    private final double DELTA = 1E-6;
+    private Ln ln = new Ln();
+    private LnStub lnStub = new LnStub();
+    private Map<Double, Double> stubTable = lnStub.getTable();
 
     @Test
     public void checkCloseToOne(){

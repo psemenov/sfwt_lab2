@@ -16,7 +16,7 @@ public class LnStub {
         table.put(Math.E + 0.01, 1.003672044);
         table.put(0.0 - 0.01, Double.NaN);
         table.put(0.0, Double.NEGATIVE_INFINITY);
-        table.put(0.0 + 0.01, -4.597299250490899);
+        table.put(0.0 + 0.01, -4.60517018599);
         table.put(Double.POSITIVE_INFINITY,Double.POSITIVE_INFINITY);
     }
 
