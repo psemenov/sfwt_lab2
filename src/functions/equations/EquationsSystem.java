@@ -6,7 +6,7 @@ import functions.logorithmic.Ln;
 import functions.logorithmic.Log2;
 import functions.logorithmic.Log3;
 
-public class equationsSystem extends AbstractFunction {
+public class EquationsSystem extends AbstractFunction {
     private final Ln ln = new Ln();
     private final Log2 log2 = new Log2();
     private final Log3 log3 = new Log3();
