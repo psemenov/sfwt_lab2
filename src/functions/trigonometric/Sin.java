@@ -10,6 +10,9 @@ public class Sin extends AbstractFunction {
 
     @Override
     public double calcValue(double x) {
+        if (Double.isNaN(x) || Double.isInfinite(x)) {
+            return Double.NaN;
+        }
         BigDecimal prevSum;
         BigDecimal currSum = BigDecimal.ZERO;
         int n = 0;
@@ -20,6 +23,7 @@ public class Sin extends AbstractFunction {
                     .divide(new BigDecimal(factorial(2 * n + 1)), 10, RoundingMode.HALF_UP);
             currSum = currSum.add(term);
             n++;
+            System.out.println(n);
         } while (prevSum.subtract(currSum).abs().doubleValue() > DEFAULT_DELTA);
 
         return currSum.doubleValue();
