@@ -1,4 +1,4 @@
-package functions.logorithmic;
+package logorithmic;
 
 import functions.logorithmic.Ln;
 import org.junit.Test;
