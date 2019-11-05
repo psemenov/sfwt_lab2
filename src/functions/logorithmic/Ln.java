@@ -2,10 +2,24 @@ package functions.logorithmic;
 
 import functions.AbstractFunction;
 
+import static java.lang.Double.*;
+
 public class Ln extends AbstractFunction {
 
     @Override
     public double calcValue(double x){
+        if(x < 0.0 || isNaN(x)){
+            return NaN;
+        }
+
+        if (x == POSITIVE_INFINITY) {
+            return POSITIVE_INFINITY;
+        }
+
+        if (x == 0.0) {
+            return NEGATIVE_INFINITY;
+        }
+
         double realX = (x-1)/(x+1);
         double accumulator = 0;
         double prevValue;
