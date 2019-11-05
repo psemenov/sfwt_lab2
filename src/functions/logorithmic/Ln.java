@@ -36,7 +36,7 @@ public class Ln extends AbstractFunction {
 
     @Override
     public boolean isInDomain(double x) {
-        return x > 0;
+        return x >= 0;
     }
 
     @Override
