@@ -13,6 +13,7 @@ public class Sin extends AbstractFunction {
         if (Double.isNaN(x) || Double.isInfinite(x)) {
             return Double.NaN;
         }
+
         BigDecimal prevSum;
         BigDecimal currSum = BigDecimal.ZERO;
         int n = 0;

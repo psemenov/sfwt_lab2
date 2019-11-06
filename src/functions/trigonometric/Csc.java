@@ -7,12 +7,14 @@ public class Csc extends AbstractFunction {
 
     @Override
     public double calcValue(double x) {
-        return 1 / sin.calcValue(x);
+        double sinValue = sin.calcValue(x);
+        double result = 1 / sinValue;
+        return result > 1e7 || result < -1e7 ? Double.NaN : result ;
     }
 
     @Override
     public boolean isInDomain(double x) {
-        return false;
+        return true;
     }
 
     @Override
