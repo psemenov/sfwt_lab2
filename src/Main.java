@@ -7,11 +7,7 @@ import static java.lang.Math.*;
 
 public class Main {
     public static void main(String[] args) {
-        final double DEFAULT_DELTA = 1E-9;
-        Sec sec = new Sec();
-        Cos cos = new Cos();
-       // System.out.println( 1 / cos.calcValue(0));
-       // System.out.println(sec.isInDomain(0));
-        System.out.println(Math.abs(0.0 % (Math.PI / 2)));
+        EquationsSystem system = new EquationsSystem();
+        System.out.println(system.isInDomain(PI));
     }
 }

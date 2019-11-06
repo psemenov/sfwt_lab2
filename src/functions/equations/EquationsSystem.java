@@ -30,7 +30,8 @@ public class EquationsSystem extends AbstractFunction {
 
     @Override
     public boolean isInDomain(double x) {
-        return (tan.isInDomain(x) && x > 0 && sec.isInDomain(x) && csc.isInDomain(x));
+        return x > 0 || tan.isInDomain(x)&& sec.isInDomain(x) && csc.isInDomain(x);
+       // return (tan.isInDomain(x) && x > 0 && sec.isInDomain(x) && csc.isInDomain(x));
     }
 
     @Override
