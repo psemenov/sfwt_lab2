@@ -10,11 +10,11 @@ import static java.lang.Math.PI;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
 public class SinTest extends Assert {
-    Sin sin = new Sin();
-    SinStub sinStub = new SinStub();
-    Map<Double, Double> stubTable = sinStub.getTable();
+    private Sin sin = new Sin();
+    private SinStub sinStub = new SinStub();
+    private Map<Double, Double> stubTable = sinStub.getTable();
 
-    final double DELTA = 1E-6;
+    private final double DELTA = 1E-6;
 
     @Test
     public void testMinusTwoPinToMinusPinAndAHalf() {

@@ -10,11 +10,11 @@ import static java.lang.Math.PI;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
 public class CosTest extends Assert {
-    Cos cos = new Cos();
-    CosStub cosStub = new CosStub();
-    Map<Double, Double> stubTable = cosStub.getTable();
+    private Cos cos = new Cos();
+    private CosStub cosStub = new CosStub();
+    private Map<Double, Double> stubTable = cosStub.getTable();
 
-    final double DELTA = 1E-6;
+    private final double DELTA = 1E-6;
 
     @Test
     public void testMinusTwoPinToMinusPinAndAHalf() {
