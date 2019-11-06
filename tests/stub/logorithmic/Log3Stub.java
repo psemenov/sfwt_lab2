@@ -14,7 +14,7 @@ public class Log3Stub {
         table.put(3.0 + 0.01, 1.003029);
 
         table.put(0.0 - 0.01, Double.NaN);
-        table.put(0.0, Double.NEGATIVE_INFINITY);
+        table.put(0.0, Double.NaN);
         table.put(0.0 + 0.01, -4.1918065);
 
         table.put(1.0 - 0.01, -0.009148);

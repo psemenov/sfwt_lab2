@@ -7,13 +7,13 @@ public class Cos extends AbstractFunction {
 
     @Override
     public double calcValue(double x) {
-       // return Math.sqrt(1 - Math.pow(sin.calcValue(x), 2));
+       //return Math.sqrt(1 - Math.pow(sin.calcValue(x), 2));
         return sin.calcValue(Math.PI/2 - x);
     }
 
     @Override
     public boolean isInDomain(double x) {
-        return false;
+        return true;
     }
 
     @Override

@@ -28,10 +28,10 @@ public class EquationsSystem extends AbstractFunction {
         return Math.pow((((log3.calc(x)-ln.calc(x))+log2.calc(x))/(log2.calc(x))) * Math.pow(log3.calc(x),3),2);
     }
 
-    //TODO redo domain
     @Override
     public boolean isInDomain(double x) {
-        return (tan.isInDomain(x)) || (x > 0 && x != 1);
+        return x > 0 || tan.isInDomain(x)&& sec.isInDomain(x) && csc.isInDomain(x);
+       // return (tan.isInDomain(x) && x > 0 && sec.isInDomain(x) && csc.isInDomain(x));
     }
 
     @Override

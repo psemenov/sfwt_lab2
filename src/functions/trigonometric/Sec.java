@@ -2,17 +2,20 @@ package functions.trigonometric;
 
 import functions.AbstractFunction;
 
+
 public class Sec extends AbstractFunction {
     private final Cos cos = new Cos();
 
     @Override
     public double calcValue(double x) {
-        return 1 / cos.calcValue(x);
+        double cosValue = cos.calcValue(x);
+        double result = 1 / cosValue;
+        return result > 1e7 || result < -1e7 ? Double.NaN : result ;
     }
 
     @Override
     public boolean isInDomain(double x) {
-        return false;
+        return Math.abs(x % (Math.PI / 2)) != 0.0 || x == 0.0;
     }
 
     @Override
