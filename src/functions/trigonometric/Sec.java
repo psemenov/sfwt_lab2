@@ -15,7 +15,7 @@ public class Sec extends AbstractFunction {
 
     @Override
     public boolean isInDomain(double x) {
-        return true;
+        return Math.abs(x % (Math.PI / 2)) != 0.0 || x == 0.0;
     }
 
     @Override

@@ -14,7 +14,7 @@ public class Csc extends AbstractFunction {
 
     @Override
     public boolean isInDomain(double x) {
-        return true;
+        return Math.abs(x % (Math.PI)) != 0.0;
     }
 
     @Override
