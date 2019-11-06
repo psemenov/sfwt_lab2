@@ -8,7 +8,7 @@ public class Ln extends AbstractFunction {
 
     @Override
     public double calcValue(double x){
-        if(x < 0.0 || isNaN(x)){
+        if(x < 0.0 || isNaN(x) || !isInDomain(x)){
             return NaN;
         }
 
@@ -36,7 +36,7 @@ public class Ln extends AbstractFunction {
 
     @Override
     public boolean isInDomain(double x) {
-        return x >= 0;
+        return x > 0;
     }
 
     @Override
