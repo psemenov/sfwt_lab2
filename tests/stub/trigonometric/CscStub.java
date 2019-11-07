@@ -1,10 +1,12 @@
 package stub.trigonometric;
 
+import functions.trigonometric.Csc;
+
 import java.util.HashMap;
 import java.util.Map;
 import static java.lang.Math.*;
 
-public class CscStub {
+public class CscStub extends Csc {
     private final Map<Double, Double> table = new HashMap<>();
 
     public CscStub() {
@@ -24,9 +26,17 @@ public class CscStub {
 
         //-Pi/2
         table.put(-Math.PI , Double.NaN);
+
+        table.put(-4.0,1.3213487088109024);
+        table.put(-1.5, -1.0025113042467249);
     }
 
     public Map<Double, Double> getTable() {
         return table;
+    }
+
+    @Override
+    public double calcValue(double x) {
+        return table.get(x);
     }
 }

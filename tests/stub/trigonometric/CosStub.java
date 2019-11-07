@@ -1,10 +1,12 @@
 package stub.trigonometric;
 
+import functions.trigonometric.Cos;
+
 import java.util.HashMap;
 import java.util.Map;
 import static java.lang.Math.*;
 
-public class CosStub {
+public class CosStub extends Cos {
     private final Map<Double, Double> table = new HashMap<>();
 
     public CosStub() {
@@ -35,11 +37,20 @@ public class CosStub {
         table.put(PI / 3, 0.5);
         table.put(PI / 2, 0.0);
 
+        table.put(-4.0,-0.6536436208636119);
+        table.put(-1.5, 0.0707372016677029);
+        table.put(-0.5, 0.8775825618903728);
+
         table.put(Double.POSITIVE_INFINITY, Double.NaN);
         table.put(Double.NEGATIVE_INFINITY, Double.NaN);
     }
 
     public Map<Double, Double> getTable() {
         return table;
+    }
+
+    @Override
+    public double calcValue(double x) {
+        return table.get(x);
     }
 }

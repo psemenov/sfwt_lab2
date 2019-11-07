@@ -38,15 +38,4 @@ public class Ln extends AbstractFunction {
     public boolean isInDomain(double x) {
         return x > 0;
     }
-
-    @Override
-    public Boolean getParityStatus() {
-        return null;
-    }
-
-    @Override
-    public Double getPeriod() {
-        return null;
-    }
-
 }

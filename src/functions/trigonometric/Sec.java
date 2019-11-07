@@ -4,12 +4,11 @@ import functions.AbstractFunction;
 
 
 public class Sec extends AbstractFunction {
-    private final Cos cos = new Cos();
+    private final Sin sin = new Sin();
 
     @Override
     public double calcValue(double x) {
-        double cosValue = cos.calcValue(x);
-        double result = 1 / cosValue;
+        double result = 1 / sin.calcValue(Math.PI/2 - x);
         return result > 1e7 || result < -1e7 ? Double.NaN : result ;
     }
 
@@ -18,13 +17,4 @@ public class Sec extends AbstractFunction {
         return Math.abs(x % (Math.PI / 2)) != 0.0 || x == 0.0;
     }
 
-    @Override
-    public Boolean getParityStatus() {
-        return null;
-    }
-
-    @Override
-    public Double getPeriod() {
-        return null;
-    }
 }

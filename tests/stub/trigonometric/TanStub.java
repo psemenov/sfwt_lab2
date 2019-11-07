@@ -1,10 +1,12 @@
 package stub.trigonometric;
 
+import functions.trigonometric.Tan;
+
 import java.util.HashMap;
 import java.util.Map;
 import static java.lang.Math.*;
 
-public class TanStub {
+public class TanStub extends Tan {
     private final Map<Double, Double> table = new HashMap<>();
 
     public TanStub() {
@@ -32,9 +34,17 @@ public class TanStub {
 
         //Lower than -PI/2
         table.put( -4.0 , -1.15782128235);
+
+        table.put(-1.5, -14.101419947171719);
+        table.put(-0.5, -0.5463024898437905);
     }
 
     public Map<Double, Double> getTable() {
         return table;
+    }
+
+    @Override
+    public double calcValue(double x) {
+        return table.get(x);
     }
 }

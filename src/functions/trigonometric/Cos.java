@@ -16,14 +16,4 @@ public class Cos extends AbstractFunction {
         return true;
     }
 
-    @Override
-    public Boolean getParityStatus() {
-        return null;
-    }
-
-    @Override
-    public Double getPeriod() {
-        return null;
-    }
-
 }

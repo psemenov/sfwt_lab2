@@ -15,14 +15,4 @@ public class Log3 extends AbstractFunction {
     public boolean isInDomain(double x) {
         return ln.isInDomain(x);
     }
-
-    @Override
-    public Boolean getParityStatus() {
-        return null;
-    }
-
-    @Override
-    public Double getPeriod() {
-        return null;
-    }
 }

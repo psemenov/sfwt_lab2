@@ -1,10 +1,12 @@
 package stub.trigonometric;
 
+import functions.trigonometric.Sin;
+
 import java.util.HashMap;
 import java.util.Map;
 import static java.lang.Math.*;
 
-public class SinStub {
+public class SinStub extends Sin {
     private final Map<Double, Double> table = new HashMap<>();
 
     public SinStub() {
@@ -35,11 +37,23 @@ public class SinStub {
         table.put(PI / 3, Math.sqrt(3) / 2.0);
         table.put(PI / 2, 1.0);
 
+        table.put(-4.0,0.7568024953079282);
+        table.put(-1.5, -0.9974949866040544);
+        table.put(-0.5, -0.479425538604203);
+
         table.put(Double.POSITIVE_INFINITY, Double.NaN);
         table.put(Double.NEGATIVE_INFINITY, Double.NaN);
     }
 
     public Map<Double, Double> getTable() {
         return table;
+    }
+
+    @Override
+    public double calcValue(double x) {
+        if (Double.isNaN(x) || Double.isInfinite(x)) {
+            return Double.NaN;
+        }
+        return table.get(x);
     }
 }

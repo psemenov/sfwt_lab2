@@ -39,16 +39,7 @@ public class Sin extends AbstractFunction {
 
     @Override
     public boolean isInDomain(double x) {
-        return false;
+        return true;
     }
 
-    @Override
-    public Boolean getParityStatus() {
-        return null;
-    }
-
-    @Override
-    public Double getPeriod() {
-        return null;
-    }
 }

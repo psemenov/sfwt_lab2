@@ -7,13 +7,13 @@ import functions.logorithmic.Log2;
 import functions.logorithmic.Log3;
 
 public class EquationsSystem extends AbstractFunction {
-    private final Ln ln = new Ln();
-    private final Log2 log2 = new Log2();
-    private final Log3 log3 = new Log3();
-    private final Sin sin = new Sin();
-    private final Tan tan = new Tan();
-    private final Csc csc = new Csc();
-    private final Sec sec = new Sec();
+    public Ln ln = new Ln();
+    public Log2 log2 = new Log2();
+    public Log3 log3 = new Log3();
+    public Sin sin = new Sin();
+    public Tan tan = new Tan();
+    public Csc csc = new Csc();
+    public Sec sec = new Sec();
 
     @Override
     public double calcValue(double x) {
@@ -30,17 +30,6 @@ public class EquationsSystem extends AbstractFunction {
 
     @Override
     public boolean isInDomain(double x) {
-        return x > 0 || tan.isInDomain(x)&& sec.isInDomain(x) && csc.isInDomain(x);
-       // return (tan.isInDomain(x) && x > 0 && sec.isInDomain(x) && csc.isInDomain(x));
-    }
-
-    @Override
-    public Boolean getParityStatus() {
-        return null;
-    }
-
-    @Override
-    public Double getPeriod() {
-        return null;
+        return x > 0 || tan.isInDomain(x) && sec.isInDomain(x) && csc.isInDomain(x);
     }
 }

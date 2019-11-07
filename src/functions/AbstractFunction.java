@@ -7,14 +7,11 @@ public abstract class AbstractFunction {
         if (Double.isNaN(x) || !isInDomain(x)) {
             return Double.NaN;
         }
+        //System.out.println(x + " : " + calcValue(x) + " " + this.getClass().getSimpleName());
         return calcValue(x);
     }
 
     public abstract boolean isInDomain(double x);
-
-    public abstract Boolean getParityStatus();
-
-    public abstract Double getPeriod();
 
     public abstract double calcValue(double x);
 }

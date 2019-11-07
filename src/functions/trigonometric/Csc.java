@@ -16,14 +16,4 @@ public class Csc extends AbstractFunction {
     public boolean isInDomain(double x) {
         return Math.abs(x % (Math.PI)) != 0.0;
     }
-
-    @Override
-    public Boolean getParityStatus() {
-        return null;
-    }
-
-    @Override
-    public Double getPeriod() {
-        return null;
-    }
 }

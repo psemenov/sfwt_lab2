@@ -16,13 +16,4 @@ public class Log2 extends AbstractFunction {
         return ln.isInDomain(x);
     }
 
-    @Override
-    public Boolean getParityStatus() {
-        return null;
-    }
-
-    @Override
-    public Double getPeriod() {
-        return null;
-    }
 }
